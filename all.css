@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Italianno&family=Lato:wght@400;700&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Italianno&family=Itim&family=Lato:wght@400;700&family=League+Spartan:wght@100..900&family=Sriracha&display=swap');
+
+
+#envelope {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    background-color: #FFC0CB;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+.flap {
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 82px solid transparent;
+    border-top: 98px solid #FFB7C5;
+    transform-origin: top;
+}
+.pocket {
+    border-left: 140px solid #FFC0CB;
+    border-right: 140px solid #FFC0CB;
+    border-bottom: 90px solid 	#FFB7C5;
+    border-top: 90px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.letter {
+    position: relative;
+    background-color: #fff;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+    top: 10%;
+    border-radius: 6px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+}
+
+.words {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    font-size: 25px;
+    height: 50%;
+    font-family: "Italianno", serif;
+    
+}
+.words.line1 {
+    top: 5%;
+    width: 100%;
+    height: 7%;
+    
+}
+.words.line2 {
+    top: 30%;
+}
+.open .flap {
+    transform: rotateX(180deg);
+    transition: transform 0.4s ease, z-index 0.6s;
+    z-index: 1;
+}
+.close .flap {
+    transform: rotateX(0deg);
+    transition: transform 0.4s 0.6s ease, z-index 1s;
+    z-index: 5;
+}
+.close .letter {
+    transform: translateY(0px);
+    transition: transform 0.4s ease, z-index 1s;
+    z-index: 1;
+}
+.open .letter {
+    transform: translateY(-60px);
+    transition: transform 0.4s 0.6s ease, z-index 0.6s;
+    z-index: 2;
+}
+.hearts {
+    position: absolute;
+    top: 50px; /* Adjusted to be closer to the envelope */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.heart {
+    position: absolute;
+    bottom: 0;
+    width: 30px; /* Reduced heart size */
+    height: 30px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.heart:before, .heart:after {
+    position: absolute;
+    content: '';
+    left: 30px;
+    top: 0;
+    width: 30px;
+    height: 50px;
+    background: #FF69B4;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* Hearts only appear when the envelope is open */
+.open .heart {
+    opacity: 1;
+    animation: slideUp 7s linear infinite, sideSway 2s ease-in-out infinite alternate;
+}
+
+/* Floating hearts animation */
+/* Hearts floating up one by one */
+@keyframes slideUp {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Side sway animation for hearts */
+@keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 10px;
+    }
+}
+
+/* Hearts staggered timing */
+.open .heart.a1 {
+    animation: slideUp 4s linear infinite 0s, sideSway 2s ease-in-out infinite alternate;
+}
+.open .heart.a2 {
+    animation: slideUp 4s linear infinite 0.5s, sideSway 2s ease-in-out infinite alternate;
+}
+.open .heart.a3 {
+    animation: slideUp 4s linear infinite 1s, sideSway 2s ease-in-out infinite alternate;
+}
+.open .heart.a4 {
+    animation: slideUp 4s linear infinite 1.5s, sideSway 2s ease-in-out infinite alternate;
+}
+.open .heart.a5 {
+    animation: slideUp 4s linear infinite 2s, sideSway 2s ease-in-out infinite alternate;
+}
+.open .heart.a6 {
+    animation: slideUp 4s linear infinite 2.5s, sideSway 2s ease-in-out infinite alternate;
+}
+
+/* Individual heart positions */
+.a1 {
+    left: -80px;
+    transform: scale(0.6);
+    opacity: 1;
+}
+
+.a2 {
+    left: 0px;
+    transform: scale(0.5);
+    opacity: 1;
+}
+
+.a3 {
+    left: 50px;
+    top: 20px;
+    transform: scale(0.4);
+    opacity: 1;
+}
+.a4 {
+    left: 20px;
+    top: 50px;
+    transform: scale(0.1);
+    opacity: 1;
+}
+
+.a5{
+    left: 10px;
+    top: -60px;
+    transform: scale(0.2);
+    opacity: 1;
+}
+
+.a6 {
+    left: -20px;
+    top: 10px;
+    transform: scale(0.2);
+    opacity: 1;
+}
+
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -600px;
+    }
+}
+@keyframes sideSway {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 50px;
+    }
+}
+body {
+    background: linear-gradient(to right, #ff9aa2, #ffb6c1, #ff6f91);
+}
+.envelope-wrapper {
+    height: 380px;
+}
+.reset {
+    text-align: center;
+}
+.reset button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: solid 2px #FF69B4;
+    border-radius: 4px;
+    color: #FF66B2;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 5px;
+    padding: 10px;
+    line-height: 1em;
+    text-decoration:  none;
+    min-width: 120px;
+    outline: none;
+}
+.reset button:hover {
+    background-color: #FF66B2;
+    color: #fff;
+}
+

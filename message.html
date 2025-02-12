@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Italianno&family=Lato:wght@400;700&family=League+Spartan:wght@100..900&display=swap');
+
+        body {
+            background: linear-gradient(to right, #ff9aa2, #ffb6c1, #ff6f91);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .letter {
+            background-color:  #FFD1DC;
+            padding: 30px;
+            width: 50%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-family: "Italianno", serif;
+            font-size: 25px;
+            color: #5a3e36;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Heart Button */
+        .heart-button {
+            background-color: #d62828;
+            display: block;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .heart-button:before,
+        .heart-button:after {
+            content: "";
+            background-color: #d62828;
+            border-radius: 50%;
+            height: 40px;
+            position: absolute;
+            width: 40px;
+        }
+        
+        .heart-button:before {
+            top: -20px;
+            left: 0;
+        }
+        
+        .heart-button:after {
+            left: 20px;
+            top: 0;
+        }
+
+        /* Hover & Click Effects */
+        .heart-button:hover {
+            transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
+        }
+
+        .heart-button.clicked {
+            background-color: #ff4757;
+        }
+        
+        .heart-button.clicked:before,
+        .heart-button.clicked:after {
+            background-color: #ff4757;
+        }
+
+        .hearts {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+        }
+        
+        .one, .two, .three, .four, .five {
+            background-color: red;
+            display: inline-block;
+            height: 10px;
+            position: relative;
+            transform: rotate(-45deg);
+            width: 10px;
+            animation: heart 2s ease-out infinite;
+        }
+        
+        .one:before, .one:after, 
+        .two:before, .two:after, 
+        .three:before, .three:after, 
+        .four:before, .four:after, 
+        .five:before, .five:after {
+            content: "";
+            background-color: red;
+            border-radius: 50%;
+            height: 10px;
+            position: absolute;
+            width: 10px;
+        }
+        
+        .one:before, .two:before, .three:before, .four:before, .five:before {
+            top: -5px;
+            left: 0;
+        }
+        
+        .one:after, .two:after, .three:after, .four:after, .five:after {
+            left: 5px;
+            top: 0;
+        }
+            
+        .one { left: -20px; animation-delay: 0s; }
+        .two { left: 0px; animation-delay: 0.5s; }
+        .three { left: 20px; animation-delay: 1s; }
+        .four { left: 40px; animation-delay: 1.5s; }
+        .five { left: 60px; animation-delay: 2s; }
+
+        @keyframes heart {
+            0% {
+                transform: translateY(0) rotate(-45deg) scale(0.3);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-150px) rotate(-45deg) scale(1.3);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="letter">
+        <p>Dearest Love,</p>
+        <p>
+            Like the autumn leaves that softly fall,<br>
+            Your love has wrapped me, heart and all.<br>
+            Through time and tides, near or far,<br>
+            You remain my guiding star. ✨
+        </p>
+        
+        <p>Forever yours,</p>
+
+        <button class="heart-button" onclick="toggleHeart()"></button>
+
+        <div class="hearts">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+        
+        <p><strong>- Xaijan</strong></p>
+
+    </div>
+
+    <script>
+        function toggleHeart() {
+            const heart = document.querySelector(".heart-button");
+            heart.classList.toggle("clicked");
+
+            setTimeout(() => {
+            window.location.href = "flower.html"; // Redirect after 1 second
+        }, 1000);
+        }
+    </script>
+</body>
+</html>
