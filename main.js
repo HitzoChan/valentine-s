@@ -9,7 +9,7 @@ function unlock() {
 
     if (enteredPassword === firstPassword) {
         status.innerHTML = "✅ Welcome, Marielle!";
-        sticker.src = "/img/wow.gif"; // Change to happy sticker
+        sticker.src = "./img/wow.gif"; // Change to happy sticker
 
         setTimeout(() => {
             window.location.href = "first.html"; // Redirect after 1 second
@@ -17,7 +17,7 @@ function unlock() {
 
     } else if (enteredPassword === secondPassword) {
         status.innerHTML = "✅ Welcome, Trisha!";
-        sticker.src = "/img/wow.gif"; // Change to heart sticker
+        sticker.src = "./img/wow.gif"; // Change to heart sticker
 
         setTimeout(() => {
             window.location.href = "first.html"; // Redirect after 1 second
@@ -25,7 +25,7 @@ function unlock() {
 
     } else {
         status.innerHTML = "❌ Incorrect Code!";
-        sticker.src = "/img/nono.gif";
+        sticker.src = "./img/nono.gif";
         sticker.style.width = "100px"; // Change to error sticker
 
         // Refresh the login form after 7 seconds
