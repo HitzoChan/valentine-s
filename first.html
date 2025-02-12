@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ask her out</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Italianno&family=Itim&family=Lato:wght@400;700&family=League+Spartan:wght@100..900&family=Sriracha&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Sriracha", serif;
+        }
+
+        body  {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ff9aa2, #ffb6c1, #ff6f91);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .container .sticker img {
+            max-width: 200px;
+        }
+
+        .container .btn {
+            display: flex;
+            gap: 25px;
+        }
+
+        .btn {
+            border: 3px solid #F08080;
+            background: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 1px;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn1 {
+            color: #F08080;
+        }
+
+        .btn1:hover {
+            color: #fff
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: #F08080;
+            z-index: -1;
+            transition: 0.8s;
+        }
+
+        .btn1::before {
+            top: 0;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .btn1:hover::before {
+            height: 180%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="sticker">
+            <img src="/img/care.gif" alt="">
+        </div>
+
+        <h1>Uy, kamusta ka?</h1>
+        <p>Sana masaya ka ngayon.</p>
+
+            <button class="btn btn1" onclick="toggleBtn()">CLICK MO KO</button>
+    </div>
+
+    <script>
+        function toggleBtn() {
+            const btn = document.querySelector(".btn");
+            btn.classList.toggle("clicked");
+
+            setTimeout(() => {
+            window.location.href = "second.html"; // Redirect after 1 second
+        }, 1000);
+        }
+    </script>
+</body>
+</html>
