@@ -53,4 +53,29 @@ document.getElementById("heart").addEventListener("touchstart", function(event) 
     }, 1000);
 });
 
+function changeLetter() {
+            let enteredPassword = document.getElementById("password").value;
+            let greeting = document.getElementById("greeting");
+            let message = document.getElementById("message");
+            let closing = document.getElementById("closing");
+            let signature = document.getElementById("signature");
+
+            if (enteredPassword === "password1") {
+                greeting.innerHTML = "My Dearest Marielle,";
+                message.innerHTML = "Your laughter is my favorite song, <br> your love is my sweetest dream. <br> You are my everything. ❤️";
+                closing.innerHTML = "With all my love,";
+                signature.innerHTML = "- Your Secret Admirer";
+            } else if (enteredPassword === "password2") {
+                greeting.innerHTML = "Hello, Trisha!";
+                message.innerHTML = "Roses are red, violets are blue, <br> My world is brighter, because of you. 🌹";
+                closing.innerHTML = "Forever grateful,";
+                signature.innerHTML = "- Your Best Friend";
+            } else {
+                greeting.innerHTML = "Oops!";
+                message.innerHTML = "❌ Incorrect Password!";
+                closing.innerHTML = "";
+                signature.innerHTML = "- Try again!";
+            }
+        }
+
 
