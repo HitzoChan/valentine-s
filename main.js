@@ -8,7 +8,6 @@ function unlock() {
     let sticker = document.getElementById("sticker"); // Reference to the image element
 
     if (enteredPassword === firstPassword) {
-        localStorage.setItem("password", enteredPassword);
         status.innerHTML = "✅ Welcome, Marielle!";
         sticker.src = "./img/wow.gif"; // Change to happy sticker
 
@@ -17,7 +16,6 @@ function unlock() {
         }, 2000);
 
     } else if (enteredPassword === secondPassword) {
-        localStorage.setItem("password", enteredPassword);
         status.innerHTML = "✅ Welcome, Trisha!";
         sticker.src = "./img/wow.gif"; // Change to heart sticker
 
@@ -55,25 +53,3 @@ document.getElementById("heart").addEventListener("touchstart", function(event) 
     }, 1000);
 });
 
-window.onload = function() {
-    let storedPassword = localStorage.getItem("password");
-
-    if (storedPassword === "password1") {
-        document.getElementById("greeting").innerHTML = "My Dearest Marielle,";
-        document.getElementById("message").innerHTML = "Your laughter is my favorite song, <br> your love is my sweetest dream. <br> You are my everything. ❤️";
-        document.getElementById("closing").innerHTML = "With all my love,";
-        document.getElementById("signature").innerHTML = "- Your Secret Admirer";
-    } 
-    else if (storedPassword === "password2") {
-        document.getElementById("greeting").innerHTML = "Hello, Trisha!";
-        document.getElementById("message").innerHTML = "Roses are red, violets are blue, <br> My world is brighter, because of you. 🌹";
-        document.getElementById("closing").innerHTML = "Forever grateful,";
-        document.getElementById("signature").innerHTML = "- Your Best Friend";
-    } 
-    else {
-        document.getElementById("greeting").innerHTML = "Oops!";
-        document.getElementById("message").innerHTML = "❌ Incorrect Password!";
-        document.getElementById("closing").innerHTML = "";
-        document.getElementById("signature").innerHTML = "- Try again!";
-    }
-};
