@@ -50,7 +50,7 @@ if (savedPassword === firstPassword) {
         I dream of the day when I can hold your hand, look into your eyes, and tell you in person how much you mean to me.<br>
         Until then, know that no matter how far we are, you are always in my heart.<br>`;
     note.innerHTML = `Yours, no matter the distance,<br>`;
-    yourName.innerHTML = `- Xaijan<br>`;
+    yourName.innerHTML = `- Xaijan<br><br><br>`;
 
 } else if (savedPassword === fourthPassword) {
     dear.innerHTML = `Dear Anthea,<br>`;
