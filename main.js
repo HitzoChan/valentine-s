@@ -4,6 +4,7 @@ const secondPassword = "1093he6";
 const thirdPassword = "34fsx79";
 const fourthPassword = "49cz7e2";
 const fivePassword = "920al81";
+const sixPassword = "529jo30";
 
 function unlock() {
     let enteredPassword = document.getElementById("password").value;
@@ -54,7 +55,16 @@ function unlock() {
         setTimeout(() => {
             window.location.href = "first.html";
         }, 2000);
-        
+
+    } else if (enteredPassword === sixPassword) {
+        localStorage.setItem("userPassword", enteredPassword);
+        status.innerHTML = "✅ Welcome, love!";
+        sticker.src = "./img/wow.gif";
+
+        setTimeout(() => {
+            window.location.href = "first.html";
+        }, 2000);
+            
     } else {
         status.innerHTML = "❌ Incorrect Code!";
         sticker.src = "./img/nono.gif";
