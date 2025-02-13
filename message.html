@@ -81,19 +81,22 @@
             top: 0;
         }
 
-        /* Hover & Click Effects */
-        .heart-button:hover {
-            transform: translate(-50%, -50%) rotate(-45deg) scale(1.1);
-        }
+      .heart-button:hover {
+        transform: scale(1.1); /* Enlarges slightly on hover */
+        transition: transform 0.2s ease;
+    }
 
-        .heart-button.clicked {
-            background-color: #ff4757;
-        }
-        
-        .heart-button.clicked:before,
-        .heart-button.clicked:after {
-            background-color: #ff4757;
-        }
+    .heart-button.clicked {
+        background-color: #ff4757;
+        transform: scale(1.2); /* Pops up slightly when clicked */
+        transition: transform 0.2s ease;
+    }
+    
+    .heart-button.clicked:before,
+    .heart-button.clicked:after {
+        background-color: #ff4757;
+    }
+
 
         .hearts {
             position: absolute;
