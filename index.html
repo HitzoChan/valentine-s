@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Happy Valentine's 💕</h2>
+        <p>Please enter your secret code to log in.</p>
+
+        <div class="stickers">
+            <img src="./img/intro.gif" id="sticker" alt="Sticker" style="max-width: 100px;">
+        </div>
+
+        <div class="hearts">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Enter the secret code">
+            </div>
+            <button type="button" onclick="unlock()" class="login-btn">Enter</button>
+            <p id="status">Locked</p>
+        </form>
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
