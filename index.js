@@ -12,6 +12,7 @@ const secondPassword = "1093he6";
 const thirdPassword = "34fsx79";
 const fourthPassword = "49cz7e2";
 const fivePassword = "920al81";
+const sixPassword = "529jo30";
 
 
 // Get the stored password from localStorage
@@ -74,6 +75,17 @@ if (savedPassword === firstPassword) {
     note.innerHTML = `Hope your day is filled with happiness! 😁<br>`;
     yourName.innerHTML = `- Xinco<br>`;
 
+} else if (savedPassword === sixPassword) {
+    dear.innerHTML = `Dear Mj,<br>`;
+    message.innerHTML = `
+        You have made a big impact on my life, and I felt I needed to take a moment to express how much I respect you.<br>
+        Your love, compassion, and kindness inspire me every day to better myself.<br>
+        I admire your work ethic and determination to achieve your goals, and you possess something that not many people do: the ability to make a positive impact on those around you.<br>
+        One of your greatest qualities is how you make all people feel heard, seen, and valued.<br>
+        Maybe it is because you are in your line of work, or because you happen to be in my hometown, or simply because you are a person that I look up to and would like to be, I am so grateful that you exist in my life.<br>`;
+    note.innerHTML = `Your influence,<br>`;
+    yourName.innerHTML = `- 13<br>`;
+    
 } else {
     message.innerHTML = "❌ Unauthorized access!";
     setTimeout(() => {
