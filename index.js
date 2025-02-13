@@ -24,27 +24,27 @@ let name = document.getElementById("yourName");
 let note = document.getElementById("note");
 // Change text based on password
 if (savedPassword === firstPassword) {
-    dear.innerHTML = `<br><br>Dear Marielle,<br>`;
+    dear.innerHTML = `Dear Marielle,<br>`;
     message.innerHTML = `
-        <br><br>Happy Valentine’s Day! 🎉<br>
+        Happy Valentine’s Day! 🎉<br>
         Just a little note to say I appreciate you and our friendship.<br>
         Hope today brings you lots of smiles and good vibes! 😊`;
     note.innerHTML = `With a smile,<br>`;
     yourName.innerHTML = `- Jake<br>`;
 
 } else if (savedPassword === secondPassword) {
-    dear.innerHTML = `<br><br>Dear Trisha,<br>`;
+    dear.innerHTML = `Dear Trisha,<br>`;
     message.innerHTML = `
-        <br><br>Hope you have a great Valentine’s Day! 💖<br>
+        Hope you have a great Valentine’s Day! 💖<br>
         You deserve all the happiness in the world.<br>
         Thanks for always being an amazing friend!🌟`;
     note.innerHTML = `Your friend, always and forever,<br>`;
     yourName.innerHTML = `- Jake<br>`;
 
 } else if (savedPassword === thirdPassword) {
-    dear.innerHTML = `<br><br>Dear Dabs,<br>`;
+    dear.innerHTML = `Dear Dabs,<br>`;
     message.innerHTML = `
-        <br><br>Though miles keep us apart, my heart has never felt closer to anyone than it does to you.<br>
+        Though miles keep us apart, my heart has never felt closer to anyone than it does to you.<br>
         Every message, every call, and every moment we share makes me fall for you even more.<br>
         Distance may separate us, but it only proves how strong our love truly is.<br>
         I dream of the day when I can hold your hand, look into your eyes, and tell you in person how much you mean to me.<br>
@@ -53,18 +53,18 @@ if (savedPassword === firstPassword) {
     yourName.innerHTML = `- Xaijan<br>`;
 
 } else if (savedPassword === fourthPassword) {
-    dear.innerHTML = `<br><br>Dear Anthea,<br>`;
+    dear.innerHTML = `Dear Anthea,<br>`;
     message.innerHTML = `
-        <br><br>Wishing you a Happy Valentine’s Day!<br>
+        Wishing you a Happy Valentine’s Day!<br>
         Thanks for being such a great friend—someone to joke around with,<br>
         help with school stuff, and just make life a little more fun.<br>`;
     note.innerHTML = `Hope your day is filled with happiness (and maybe some chocolates too)! Stay awesome! 😁<br>`;
     yourName.innerHTML = `- Jake<br>`;
 
 } else if (savedPassword === fivePassword) {
-    dear.innerHTML = `<br><br>Dear Anzhelina,<br>`;
+    dear.innerHTML = `Dear Anzhelina,<br>`;
     message.innerHTML = `
-        <br><br>Wrap me in serenity's gentle fold, A soothing balm for my weary soul.<br>
+        Wrap me in serenity's gentle fold, A soothing balm for my weary soul.<br>
         In tranquil hues, my heart finds rest, A calming peace that forever nest.<br>
         May the soft whispers of the summer breeze, Soothe my mind and quiet my pleas.<br>
         May the warmth of love and kindness shine, And wrap my being in a peaceful shrine.<br>
